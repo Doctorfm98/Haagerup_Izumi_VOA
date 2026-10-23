@@ -17,14 +17,14 @@ From the repository root, run `make`, `make untwisted`, or `make twisted`. `late
 Without Make, run:
 
 ```sh
-latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -latexoption=-no-shell-escape -outdir=build/untwisted untwisted/Untwisted_HI_Realization_v_46.tex
-latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -latexoption=-no-shell-escape -outdir=build/twisted twisted/Twisted_Haagerup_Izumi_Hexagon.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -latexoption=-no-shell-escape -outdir=build/untwisted untwisted/Untwisted_HI_Working_Manuscript.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -latexoption=-no-shell-escape -outdir=build/twisted twisted/Twisted_HI_Working_Manuscript.tex
 ```
 
-The output PDFs have the same basenames as the sources and are placed in the corresponding `build/` subdirectories. The supplied manuscript PDFs remain unchanged. PDF bytes can differ across LaTeX installations because of fonts, package versions, and build metadata.
+The output PDFs have the same basenames as the sources and are placed in the corresponding `build/` subdirectories. The PDFs in the manuscript directories are the reading copies. PDF bytes can differ across LaTeX installations because of fonts, package versions, and build metadata.
 
-## Verify the supplied files
+## Verify the manuscript files
 
 Run `make verify` or `sha256sum --check SHA256SUMS` at the repository root. On macOS without GNU `sha256sum`, use `shasum -a 256 -c SHA256SUMS`.
 
-The checksums identify the four supplied manuscript files. When a manuscript is updated, keep its PDF and LaTeX source together and update the links and checksums in the same commit.
+The checksums identify the four manuscript files. When a manuscript is updated, keep its PDF and LaTeX source together and update the links and checksums in the same commit.

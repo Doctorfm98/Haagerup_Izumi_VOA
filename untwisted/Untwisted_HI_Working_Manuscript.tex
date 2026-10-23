@@ -1,4 +1,4 @@
-% 23 October 2026. Revision v46, second mathematical and expository audit; standalone pdfLaTeX source.
+% Working manuscript, 23 October 2026. Standalone pdfLaTeX source.
 \documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -49,7 +49,7 @@
 \newcommand{\ds}{\displaystyle}
 \newcommand{\parityrank}{p_N}
 \setcounter{tocdepth}{1}
-\hypersetup{pdftitle={Vertex operator algebra realizations of untwisted cyclic Haagerup--Izumi centers},pdfauthor={David E. Evans and Andrew Riesen},pdfsubject={Revision 46, 23 October 2026},pdfkeywords={Haagerup--Izumi categories, vertex operator algebras}}
+\hypersetup{pdftitle={Vertex operator algebra realizations of untwisted cyclic Haagerup--Izumi centers},pdfauthor={David E. Evans and Andrew Riesen},pdfsubject={Working manuscript, 23 October 2026},pdfkeywords={Haagerup--Izumi categories, vertex operator algebras}}
 \title{\textbf{Vertex operator algebra realizations of\\untwisted cyclic Haagerup--Izumi centers}}
 \author{David E. Evans\and Andrew Riesen}
 \date{23 October 2026}
@@ -237,7 +237,7 @@ $\dim(g)=1$ and $\dim(g\rho)=-t$, and a ribbon equivalence:
 \]
 \item A simple, self-contragredient, regular, $C_2$-cofinite VOA $E_N$,
 given by the explicit finite extension in
-Theorem~\ref{audit:cancelVOA}, with:
+Theorem~\ref{thm:parity-cancellation-voa}, with:
 \[
  c(E_N)=-16N,\qquad
  \operatorname{Rep}(E_N)\simeq Z(\mathcal H_N),\qquad
@@ -380,7 +380,7 @@ $D_H$ of a cyclic Lagrangian subgroup:
 The second local category is trivial.
 Corollary~\ref{cor:our-center} identifies the ribbon center;
 Section~\ref{sec:gsy-modular} computes its full modular data.
-Theorem~\ref{audit:cancelVOA} cancels the parity factor by an explicit
+Theorem~\ref{thm:parity-cancellation-voa} cancels the parity factor by an explicit
 $E_7$ extension and proves its finiteness, duality, weak-module
 regularity and grading assertions.
 
@@ -4444,7 +4444,7 @@ it from the zero label.
 
 
 \subsection{The trace normalization and categorical dimensions}
-\label{audit:analytic-normalization}
+\label{sec:analytic-normalization}
 
 We next relate the analytic modular matrix to categorical dimensions,
 fixing compatible conventions for the Hopf link.  The argument applies
@@ -4517,7 +4517,7 @@ Its $(\mathbf1,\mathbf1)$ entry gives
 $D_{\mathbf1}^2=\Delta^{-1}$; its $(\mathbf1,Y)$ entries then give
 $D_Y=D_{\mathbf1}$ for every $Y$.
 Consequently
-\begin{equation}\label{audit:eq:analytic-vacuum-row}
+\begin{equation}\label{eq:analytic-vacuum-row}
  S^{\rm an}_{\mathbf1,X}
     =d_X S^{\rm an}_{\mathbf1,\mathbf1},\qquad
  S^{\rm an}_{\mathbf1,\mathbf1}\ne0.
@@ -4525,7 +4525,7 @@ Consequently
 In particular the analytic matrix is symmetric, in either compatible
 orientation. If $J$ centralizes $X$, its closed Hopf link is
 $d_Jd_X$ in both orientations, and hence
-\begin{equation}\label{audit:eq:analytic-centralizer-row}
+\begin{equation}\label{eq:analytic-centralizer-row}
  \frac{S^{\rm an}_{J,X}}{S^{\rm an}_{\mathbf1,X}}=d_J.
 \end{equation}
 These two identities are independent of the compatible orientation
@@ -4535,7 +4535,7 @@ rows, without requiring a unique module of minimal conformal
 weight.
 
 \section{The multivariable theta identity and its Fourier transform}
-\label{v2:theta}
+\label{sec:multivariable-theta}
 \label{g:sec:theta}
 The difference of two theta quotients is the multivariable analogue
 of Flohr's one-variable character formula
@@ -4859,8 +4859,8 @@ insertion-dependent \(W\)-trace functions imply
 Scalar characters alone would not justify this inference.
 
 Apply the normalization argument of
-Section~\ref{audit:analytic-normalization} separately to $W$ and $A$.
-Symmetry and \eqref{audit:eq:analytic-vacuum-row} give, for either VOA,
+Section~\ref{sec:analytic-normalization} separately to $W$ and $A$.
+Symmetry and \eqref{eq:analytic-vacuum-row} give, for either VOA,
 \[
  (S^{\mathrm{an}})_{M,V}
        =\dim_{\Rep(V)}(M)(S^{\mathrm{an}})_{V,V}.
@@ -4895,7 +4895,7 @@ modules. As a further check, the modern extension theorem
 semisimplicity in this nonnegatively graded setting.
 
 \section{Branching determines the rank and parity locality}
-\label{v2:branching}
+\label{sec:branching-rank}
 
 \subsection{Determining the branching Gram matrix}
 
@@ -4913,7 +4913,7 @@ This formula includes all unknown integral \(W\)-simples in the
 columns of \(b\).
 
 Use the analytic matrices in \eqref{r:eq:analytic}; both are symmetric
-by Section~\ref{audit:analytic-normalization}. Transposing that identity
+by Section~\ref{sec:analytic-normalization}. Transposing that identity
 gives $b^tS_L^{\rm an}=S_W^{\rm an}b^t$, and hence
 \[
  S_L^{\rm an}bb^t=bS_W^{\rm an}b^t=bb^tS_L^{\rm an}.
@@ -4945,7 +4945,7 @@ We use right modules with the tensor product convention of
 using the inverse braiding. This fixes the orientation in the center
 equivalences below.
 
-\begin{lemma}\label{audit:ranklemma}
+\begin{lemma}\label{lem:branching-rank}
 Let $\mathcal C$ be a nondegenerate braided fusion category over
 $\mathbb C$, let $A$ be connected \'etale, and put
 $\mathcal B=\mathcal C_A$ and $\mathcal E=\mathcal C_A^0$.
@@ -4998,7 +4998,7 @@ The last equality in the statement follows by decomposing each $U(e)$.
 \end{proof}
 
 
-Applying Lemma~\ref{audit:ranklemma} to the algebra $A$ gives:
+Applying Lemma~\ref{lem:branching-rank} to the algebra $A$ gives:
 \begin{equation}\label{r:eq:rankfull}
   \operatorname{rk}(\Cat_A)=\operatorname{Tr}(bb^t)=\parityrank(N^2+1).
 \end{equation}
@@ -5276,7 +5276,7 @@ Neutral simple & Number & Induction to \(\Neu_A\) & Spherical dimension\\
 \label{sec:actual-center}
 
 \subsection{Cyclic de-equivariantization gives the HI rules}
-\label{audit:cyclicreconstruction}
+\label{sec:cyclic-reconstruction}
 
 The near-group setting originates in Izumi's work \cite{izumi}
 and the constructions and doubles of Evans--Gannon
@@ -5288,7 +5288,7 @@ by a specified central Tannakian algebra. The next theorem records
 these hypotheses and reconstructs the fusion rules after
 de-equivariantization.
 
-\begin{theorem}\label{audit:cyclicconverse}
+\begin{theorem}\label{thm:cyclic-converse}
 Let $N\geq3$ be odd. Let $\mathcal B$ be a complex fusion category
 whose simple objects are the group
 $E=(\mathbb Z/N)^2$ of invertibles and one object $R$, with
@@ -5389,8 +5389,8 @@ as required.
 
 \subsection{The complementary subgroup fixes the pointed associator}
 
-\begin{corollary}\label{audit:untwisted}
-In Theorem \ref{audit:cyclicconverse}, suppose the specified central
+\begin{corollary}\label{cor:untwisted}
+In Theorem \ref{thm:cyclic-converse}, suppose the specified central
 Tannakian category is one Lagrangian factor of a braided embedding
 \[
  \mathcal E^{\mathrm{rev}}\longrightarrow Z(\mathcal B),\qquad
@@ -5420,12 +5420,12 @@ It does not require $K$ to remain a central subcategory after induction.
 
 \subsection{Preservation of the ribbon structure}
 
-\begin{theorem}\label{audit:ribboncenter}
+\begin{theorem}\label{thm:ribbon-center}
 Let $\mathcal D$ be a modular tensor category, and let $A$ be a
 connected \'etale algebra with $\theta_A=1$ and
 $\dim_{\mathcal D}A\ne0$. Suppose
 $\mathcal B=\mathcal D_A$ has the near-group rules in
-Theorem \ref{audit:cyclicconverse} and its local category is the
+Theorem \ref{thm:cyclic-converse} and its local category is the
 standard hyperbolic ribbon category of order $N^2$, with all its
 objects invertible in $\mathcal B$.
 Then there is a connected \'etale algebra $A'$ over $A$ such that
@@ -5448,7 +5448,7 @@ $A'$ over $A$ in $\mathcal D$, and algebra-module formation in
 stages identifies $\mathcal D_{A'}$ with the corresponding central
 de-equivariantization. Our inverse-braiding right-module convention
 agrees with the reverse local factor in the displayed center embedding.
-Theorem \ref{audit:cyclicconverse} and Corollary \ref{audit:untwisted}
+Theorem \ref{thm:cyclic-converse} and Corollary \ref{cor:untwisted}
 apply to it.
 
 The local modules after the second condensation have group
@@ -5510,7 +5510,7 @@ The branching and multiplicity budget prove that
 $\mathcal D_A$ has exactly the invertibles $E=(\mathbb Z/N)^2$ and
 $R$, with $R^2=\sum_E e+N^2R$ and $\dim R=-Nt$.
 Its local ribbon category is the standard hyperbolic category,
-and $\dim A=1+t^2\ne0$. Theorem~\ref{audit:ribboncenter} applies.
+and $\dim A=1+t^2\ne0$. Theorem~\ref{thm:ribbon-center} applies.
 \end{proof}
 
 
@@ -5684,7 +5684,7 @@ spectra or the fusion rules.
 \begin{proof}
 It suffices to work in $\mathcal D$: the two ribbon equivalences
 are Corollary~\ref{cor:our-center} and
-Theorem~\ref{audit:cancelVOA}. We first keep the natural exceptional
+Theorem~\ref{thm:parity-cancellation-voa}. We first keep the natural exceptional
 coordinate $a$ of \eqref{eq:gsy-natural-form}.
 
 \emph{Normalization and distinguished rows.}
@@ -5764,7 +5764,7 @@ To pass to the normalization of $\mathcal D$, there is one common
 scalar $\kappa$ such that
 $S^{W,\mathrm{an}}_{Z,Z'}=\kappa S^{\mathcal D}_{Z,Z'}$ for neutral
 simples $Z,Z'$. This follows from the analytic/Hopf-link comparison
-in Section~\ref{audit:analytic-normalization} and the ribbon
+in Section~\ref{sec:analytic-normalization} and the ribbon
 factorization by $\mathcal P_N$. For neutral $Y$, its Fourier label
 is $e_0$, so \eqref{r:eq:SY} and $S^{\mathcal D}_{\one,Y}=1/N$ give
 \begin{equation}\label{eq:gsy-parity-normalization}
@@ -5919,7 +5919,7 @@ remains Corollary~\ref{cor:our-center}.
 
 
 \section{An explicit VOA realization of the parity centralizer}
-\label{audit:paritycancellation}
+\label{sec:parity-cancellation}
 
 We use ``vertex operator algebra'' in the lower-bounded, integer-graded
 sense: negative conformal degrees are allowed, but there are only
@@ -5946,7 +5946,7 @@ $J_\epsilon\boxtimes_WJ_\eta\cong J_{\epsilon+\eta}$.
 With the cycle matrix $K$ of diagonal $(N+2,2,\ldots,2)$ and
 off-diagonal cycle entries $-1$, its self-braiding quadratic form,
 twist, and dimension are
-\begin{equation}\label{audit:paritydata}
+\begin{equation}\label{eq:parity-data}
  Q(\epsilon)=i^{\epsilon^{\mathsf t}K\epsilon},\qquad
  \theta_\epsilon=i^{\epsilon^{\mathsf t}K\epsilon+2N\epsilon_0},
  \qquad d_\epsilon=(-1)^{\epsilon_0}.
@@ -5973,8 +5973,8 @@ word $\epsilon$; it is even. Then
  N-T(\epsilon),&\epsilon_0=1.
  \end{cases}
 \]
-Substitution in \eqref{audit:paritydata} gives
-\begin{equation}\label{audit:semioncoords}
+Substitution in \eqref{eq:parity-data} gives
+\begin{equation}\label{eq:semion-coordinates}
  Q(\epsilon)=i^{|S\epsilon|},\qquad
  \theta_\epsilon=(-i)^{|S\epsilon|},\qquad
  d_\epsilon=(-1)^{|S\epsilon|}.
@@ -6048,7 +6048,7 @@ The order-two pointed ribbon category has
 $d(M)=\theta_M/c_{M,M}=-1$.
 Its associator on the triple of nontrivial labels is $-1$ in the
 usual semion gauge. These data give the ribbon equivalence
-\begin{equation}\label{audit:inverseE7}
+\begin{equation}\label{eq:inverse-E7}
             \operatorname{Rep}(U)\simeq(\mathcal S^-)^{\mathrm{rev}}.
 \end{equation}
 In particular no theorem about the representation category of a
@@ -6056,7 +6056,7 @@ twisted HI VOA is needed to construct this auxiliary factor.
 
 \subsection{The diagonal extension and all its weak modules}
 
-\begin{theorem}\label{audit:cancelVOA}
+\begin{theorem}\label{thm:parity-cancellation-voa}
 Let $W_N$ be the VOA constructed above, with its established parity
 ribbon factor, and put
 $\mathcal D=\mathcal P'\subset\operatorname{Rep}(W_N)$.
@@ -6088,7 +6088,7 @@ product theorem \cite[Theorem 5.1]{c:McRaeDeligne} gives
 The displayed object $E_N$ is the diagonal regular algebra in the
 first and third factors, tensored with the unit of $\mathcal D$.
 Explicitly, all its self-braidings and twists cancel by
-\eqref{audit:semioncoords}--\eqref{audit:inverseE7}.
+\eqref{eq:semion-coordinates}--\eqref{eq:inverse-E7}.
 The diagonal pointed subcategory is Tannakian, and its regular
 algebra is connected, commutative and separable.
 Its multiplication is nonzero between every pair of its simple-current
@@ -6247,7 +6247,7 @@ $|\operatorname{Irr}\mathcal D|=N^2+3$. The parity factorization
 then gives $|\operatorname{Irr}(W_N)|=2^N(N^2+3)$.
 Corollary~\ref{cor:our-center} constructs $\mathcal H_N$ and gives
 the ribbon-center identification with $\dim\rho=-t$.
-Theorem~\ref{audit:cancelVOA} supplies the explicit VOA $E_N$, its
+Theorem~\ref{thm:parity-cancellation-voa} supplies the explicit VOA $E_N$, its
 simplicity, self-contragredience, $C_2$-cofiniteness, regularity
 (and hence rationality), its central charge, its least degree, and
 the required ribbon equivalence. Theorem~\ref{thm:gsy-modular}, with the metric
@@ -6260,7 +6260,7 @@ identification in part (4). These are all the assertions of the theorem.
 \part*{Technical appendices}
 \addcontentsline{toc}{part}{Technical appendices}
 \section{Ordinary first images of proper cyclic intervals}
-\label{v2:ordinary-appendix}
+\label{app:ordinary-interval-images}
 \label{neutral:app:proper-intervals}
 
 Keep the hypothetical weight-one vacuum extension and put $H_*=2N+2$.
@@ -6531,7 +6531,7 @@ substitutions and matrix assembly are reproduced in
 
 
 \section{Maximum plateaux and the filtered Zhu span}
-\label{v2:plateaux}
+\label{app:maximum-plateaux}
 \label{neutral:app:filtered-spanning}
 
 The frame decomposition has highest vectors $v_m\in M_m$, with
