@@ -25,6 +25,8 @@ The output PDFs have the same basenames as the sources and are placed in the cor
 
 ## Verify the manuscript files
 
+The untwisted manuscript includes its complete symbolic frame calculation in Appendix I. To run it, copy the listing into a file named `certify_uniform_epsilon.py` and run `python3 certify_uniform_epsilon.py` with SymPy installed. It requires no external mathematical data and makes no network requests. Python and SymPy are optional: they are not needed to compile either manuscript.
+
 Run `make verify` or `sha256sum --check SHA256SUMS` at the repository root. On macOS without GNU `sha256sum`, use `shasum -a 256 -c SHA256SUMS`.
 
 The checksums identify the four manuscript files. When a manuscript is updated, keep its PDF and LaTeX source together and update the links and checksums in the same commit.

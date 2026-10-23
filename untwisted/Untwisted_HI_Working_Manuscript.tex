@@ -56,32 +56,24 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-For every odd integer $N\geq3$, we construct an untwisted cyclic
-Haagerup--Izumi fusion category $\mathcal H_N$ and a simple,
-self-contragredient, regular, $C_2$-cofinite vertex operator algebra
-$W_N$ of CFT type, with central charge $-5N$ and a ribbon equivalence:
+For every odd integer $N\geq3$, we construct an untwisted
+Haagerup--Izumi fusion category $\mathcal H_N$ on the negative spherical
+branch and a simple, self-contragredient, regular, $C_2$-cofinite vertex
+operator algebra $E_N$ of central charge $-16N$, together with an equivalence of modular fusion categories:
 \[
- \operatorname{Rep}(W_N)\simeq
- \mathcal P_N\boxtimes Z(\mathcal H_N).
+ \operatorname{Rep}(E_N)\simeq Z(\mathcal H_N).
 \]
-Here $\mathcal P_N$ is a pointed ribbon category of rank $2^N$, and
-noninvertible simples of $\mathcal H_N$ have spherical dimension
-$-(\sqrt{N^2+4}-N)/2$. An extension by shifted $E_7$ lattice modules
-removes the pointed factor. The resulting simple, self-contragredient,
-regular, $C_2$-cofinite VOA $E_N$ has central charge $-16N$ and
-representation category $Z(\mathcal H_N)$, of rank $N^2+3$.
-It is lower bounded and integer graded, with least conformal degree
-$-(N-1)/2$.
 
-The construction realizes Evans's cyclic Virasoro sum. Its regularity
-follows from an explicit lattice frame and projectivity of the vacuum;
-refined modular traces and branching then determine all simple modules.
-Two condensations identify the ribbon center, whose full modular data
-are the negative-branch datum
-$\mathcal{MD}_{-}(\mathbb Z/N;\mathbb Z/(N^2+4),b\mapsto b^2/(N^2+4))$
-of Gannon--Schopieray--Yadav. This comparison holds uniformly, including
-at composite discriminant. An equivalence with an independently
-prescribed Haagerup--Izumi category is not asserted.
+The VOA $E_N$ is rational, has exactly $N^2+3$ irreducible modules,
+and is lower bounded and integer graded, with least conformal degree
+$-(N-1)/2$.
+The proof begins with a CFT-type cyclic Virasoro extension of central
+charge $-5N$, whose regularity we establish. Two categorical
+condensations recover $\mathcal H_N$, and a finite extension by
+shifted lattice modules removes the auxiliary pointed factor.
+We identify the complete ribbon modular data of $Z(\mathcal H_N)$ with
+$\mathrm{MD}_{-}(\mathbb Z/N;\mathbb Z/(N^2+4),b\mapsto b^2/(N^2+4))$
+in the notation of Gannon--Schopieray--Yadav, for every odd $N$.
 \end{abstract}
 
 
@@ -229,12 +221,13 @@ For every odd integer $N\geq3$, the constructions in this paper give:
 of CFT type, with $c(W_N)=-5N$ and $(W_N)_1=0$.
 Its modular tensor category has rank $2^N(N^2+3)$ and contains a
 nondegenerate pointed ribbon subcategory $\mathcal P_N$ of rank $2^N$.
-\item An untwisted cyclic HI fusion category $\mathcal H_N$,
+\item An untwisted cyclic HI spherical fusion category $\mathcal H_N$,
 obtained by the specified two-stage condensation, with
 $\dim(g)=1$ and $\dim(g\rho)=-t$, and a ribbon equivalence:
 \[
  \mathcal P_N'\simeq Z(\mathcal H_N).
 \]
+The Drinfeld center $Z(\mathcal H_N)$ is a modular tensor category.
 \item A simple, self-contragredient, regular, $C_2$-cofinite VOA $E_N$,
 given by the explicit finite extension in
 Theorem~\ref{thm:parity-cancellation-voa}, with:
@@ -407,7 +400,6 @@ exposition, attribution, and historical account are welcome.
 \paragraph{Acknowledgments.}
 The work of the first author was supported in part by a grant of access to OpenAI models through the ChatGPT for Academic Researchers programme.
 
-% BEGIN COMPACT CONTENTS
 \clearpage
 \section*{Contents}
 \begingroup
@@ -423,7 +415,6 @@ The work of the first author was supported in part by a grant of access to OpenA
 \makeatother
 \endgroup
 \clearpage
-% END COMPACT CONTENTS
 \part{Construction and lattice realization}
 
 \section{Cyclic gluing of generic Virasoro algebras}
@@ -999,14 +990,6 @@ The first linear bracket is
 $\sum_{k=0}^3 z^k L_i(k-1)(S_je^B)/k!$; the reversed one is
 obtained by skew-symmetry, replacing $z$ by $-z-D$ and negating.
 These formulas explain the mode action in the certificate.
-As an independent finite cross-check, the supplied program
-\nolinkurl{direct_charge_B_n3.py} constructs these normally ordered
-modes and all six proper cyclic intervals directly over
-$\Q(\sqrt{13})$. For $N=3$ it verifies all nine ordered frame pairs,
-comprising 315 coefficient slots, and detects a perturbation of the
-$A_0(-2)e^B$ coefficient. This check does not use the Boolean
-interval encoding and does not replace the uniform argument.
-
 \subsection*{A nondegenerate invariant form on the ambient algebra}
 \begin{proposition}\label{c:screening-form}
 For $\lambda\ne0$, $(V_L,\omega_\lambda)$ is regular and has a unique normalized nondegenerate invariant bilinear form. Its weight-zero space is two-dimensional, so it is not of CFT type.
@@ -5501,8 +5484,8 @@ exhibited in \cite[Corollary 5.9]{gsy}.
 
 \begin{corollary}\label{cor:our-center}
 For the algebra $A=\mathbf1\oplus T$ constructed in $\mathcal D=\Par'$
-above, the category $\mathcal D$ is ribbon equivalent to
-$Z(\mathcal H_N)$, where $\mathcal H_N$ has the untwisted cyclic HI
+above, the category $\mathcal D$ is ribbon equivalent to the modular
+tensor category $Z(\mathcal H_N)$, where $\mathcal H_N$ has the untwisted cyclic HI
 fusion rules and $\dim\rho=-t$.
 \end{corollary}
 \begin{proof}
@@ -5511,6 +5494,10 @@ $\mathcal D_A$ has exactly the invertibles $E=(\mathbb Z/N)^2$ and
 $R$, with $R^2=\sum_E e+N^2R$ and $\dim R=-Nt$.
 Its local ribbon category is the standard hyperbolic category,
 and $\dim A=1+t^2\ne0$. Theorem~\ref{thm:ribbon-center} applies.
+In particular, $\mathcal H_N$ is a spherical fusion category over
+$\mathbb C$. Its Drinfeld center is therefore a modular tensor category
+with the induced ribbon structure by the general center theorem
+\cite[Section 2.9]{dgno}.
 \end{proof}
 
 
@@ -6520,16 +6507,6 @@ The other entries use the same differentiation, with the selected
 coordinate equal to one at an endpoint or interior component.
 The prefix calculation uses
 \eqref{neutral:eq:explicit-prefix-K} and $H=2/t-2t$.
-The supplied program \texttt{uniform\_cut\_jets.py} implements
-these PBW evaluations with first-order dual numbers over rational
-function fields. It verifies the value and all three derivatives
-at each of the eight points (32 exact identities); it does not
-start from the asserted gradients. The subsequent endpoint
-substitutions and matrix assembly are reproduced in
-\texttt{first\_order\_all\_interval\_checks.py}.
-
-
-
 \section{Maximum plateaux and the filtered Zhu span}
 \label{app:maximum-plateaux}
 \label{neutral:app:filtered-spanning}
@@ -7542,9 +7519,7 @@ establishes that those denominators are nonzero at the parameters
 used in the theorem. Together with the mathematical reduction to
 these patterns, this makes the calculation uniform in $N$.
 
-The program was extracted from this manuscript and rerun on
-23 October 2026. Its output was
-\texttt{UNIFORM\_SYMBOLIC\_PASS}, with the following counts:
+The program checks the following numbers of coefficient identities:
 \begin{center}
 \begin{tabular}{@{}lrrrrr@{}}
 \toprule
@@ -7562,22 +7537,7 @@ To reproduce the calculation, save the listing as
 \nolinkurl{certify_uniform_epsilon.py} and run it with Python~3 and
 SymPy. It prints a JSON report and writes the same report beside the
 script. The program requires no external mathematical data and makes
-no network requests. The accompanying source-and-checks archive
-contains this program and the supplementary programs, together
-with their execution reports. In particular,
-\nolinkurl{uniform_cut_jets.py} checks the eight first jets
-from Appendix~\ref{neutral:app:cut-polynomials},
-\nolinkurl{first_order_all_interval_checks.py} assembles the endpoint
-matrices from those derivatives and the transport formulas, and
-\nolinkurl{direct_charge_B_n3.py} provides the independent Fock-mode
-check described in Section~\ref{c:app:frame}. The remaining programs
-check the BPZ, Zhu, interval, heavy-root, and dimension identities.
-The archive's README states each check's scope; successful algebraic
-checks do not certify the surrounding representation theory.
-
-The TeX source is self-contained: it uses no external
-\verb|\input| file or bibliography database. The symbolic certificate
-is not a proof-assistant verification of the manuscript.
+no network requests. The listing is self-contained and requires no supplementary files.
 
 \subsection{Complete program}
 
@@ -7586,7 +7546,7 @@ is not a proof-assistant verification of the manuscript.
 
 N, t, and all distinct site positions are indeterminates. This enumerates
 order/equality types of at most five site indices, NOT numerical ranks.
-Interval sums use the exact counting formula explained in the proof note.
+Interval sums use the exact counting formula in the frame construction.
 """
 from collections import Counter
 from functools import lru_cache
@@ -7595,8 +7555,7 @@ from pathlib import Path
 import json
 import time
 import sympy as s
-# Exact polynomial helpers copied from the original helper module.
-# Keeping them here removes the unrelated numerical exploration dependency.
+# Polynomial operations for oscillator monomials.
 def poly_add(*args):
     out = {}
     for p in args:
@@ -8078,3 +8037,4 @@ fusion categories}, Commun. Math. Phys. 311 (2012), 617--643.
 
 \end{thebibliography}
 \end{document}
+
