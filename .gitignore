@@ -1,0 +1,34 @@
+# LaTeX temporary build files (preserve PDFs and manuscript sources)
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.out
+*.toc
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.lof
+*.lot
+
+# Local editor and operating system files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Temporary analysis environments and caches
+__pycache__/
+.pytest_cache/
+.venv/
+
+# Reproducible manuscript builds
+/build/

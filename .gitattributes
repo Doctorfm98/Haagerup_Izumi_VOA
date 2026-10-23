@@ -1,0 +1,5 @@
+*.tex text eol=lf
+*.md text eol=lf
+Makefile text eol=lf
+SHA256SUMS text eol=lf
+*.pdf binary
